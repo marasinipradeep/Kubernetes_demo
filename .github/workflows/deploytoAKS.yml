@@ -39,7 +39,7 @@ jobs:
         uses: actions/setup-node@v2.1.5
         
       - name: node build
-        run: node build -c release
+        run: node build 
         
       - name: docker build
         run: doker build -t Kubernetes_demo:'${{github.sha}}' .
