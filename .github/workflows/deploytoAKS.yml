@@ -42,7 +42,7 @@ jobs:
         run: node build -c release
         
       - name: docker build
-        run: doker build -t Kubernetes_demo:'${{github.sha}}'
+        run: doker build -t Kubernetes_demo:'${{github.sha}}' .
         
       - name: docker login 
         run: focker login --username'${{secrets.DOCKER_LOGIN}}' --password'${{secrets.DOCKER_PASSWORD}}'
