@@ -45,7 +45,7 @@ jobs:
         run: doker build -t Kubernetes_demo:'${{github.sha}}'
         
       - name: docker login 
-        run: focker login --username'${{secrets.DOCKER_LOGIN}}' --password'${{DOCKER_PASSWORD}}'
+        run: focker login --username'${{secrets.DOCKER_LOGIN}}' --password'${{secrets.DOCKER_PASSWORD}}'
         
       - name: tag docker image
         run: docker tag Kubernetes_demo:'${{github.sha}}' '${{secrets.DOCKER_LOGIN}}'/Kubernetes_demo:'${{github.sha}}'
